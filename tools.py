@@ -100,7 +100,7 @@ def dispatch_tool(tool_name: str, tool_input: dict) -> str:
     if tool_name == "send_notification":
         result = send_notification(
             message=tool_input["message"],
-            title=tool_input.get("title", "HA Supervisor"),
+            title=tool_input.get("title", "HA AI Agent"),
         )
         return json.dumps(result)
 

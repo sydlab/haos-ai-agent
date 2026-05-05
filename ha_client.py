@@ -119,7 +119,7 @@ def get_error_log() -> dict:
     }
 
 
-def send_notification(message: str, title: str = "HA Supervisor") -> dict:
+def send_notification(message: str, title: str = "HA AI Agent") -> dict:
     """
     Creates a persistent notification in HA sidebar and pushes to mobile app.
     Update mobile_service below to match your device name:

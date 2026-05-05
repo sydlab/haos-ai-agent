@@ -4,8 +4,9 @@ from tools import TOOL_DEFINITIONS, dispatch_tool
 client = anthropic.Anthropic()
 
 SYSTEM_PROMPT = """
-You are a Home Assistant supervisor agent. Your job is to diagnose smart home
-health issues — not just list them, but explain what's actually causing them.
+You are an AI agent for Home Assistant. Your job is to pull together facts from
+the REST API (states, history, logs) and diagnose smart home health issues —
+not just list them, but explain what's actually causing them.
 
 Your investigation process:
 1. Call get_unavailable_entities first to see what's offline
