@@ -1,5 +1,7 @@
 # HAOS Supervisor Agent
 
+**Branch:** `dev` — reference Python + Anthropic supervisor (this README). For the **Cursor/MCP phased plan** and repo layout, see the default **`main`** branch on GitHub.
+
 An AI agent that monitors your Home Assistant instance using Claude. It diagnoses device
 failures, correlates root causes across multiple data sources, and sends you a plain-English
 report — with concrete next steps.
