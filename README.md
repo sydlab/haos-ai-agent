@@ -17,23 +17,31 @@ report — with concrete next steps.
 
 ## Setup
 
-### 1. Get a Home Assistant long-lived token
+### 0. Clone this repository
+
+```bash
+git clone git@github.com:sydlab/home-assistant-ai-agent.git
+cd home-assistant-ai-agent
+git checkout dev
+```
+
+### 2. Get a Home Assistant long-lived token
 
 HA → Profile (bottom-left avatar) → Long-Lived Access Tokens → Create Token
 
-### 2. Find your mobile app service name
+### 3. Find your mobile app service name
 
 HA → Developer Tools → Services → search `notify.mobile_app`
 Update `mobile_service` in `ha_client.py` with your device name.
 
-### 3. Configure environment
+### 4. Configure environment
 
 ```bash
 cp .env.example .env
 # Edit .env with your values
 ```
 
-### 4. Install and run
+### 5. Install and run
 
 ```bash
 pip install -r requirements.txt
