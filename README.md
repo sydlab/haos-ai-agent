@@ -1,13 +1,15 @@
-# HAOS Supervisor
+# Home Assistant AI Agent
 
-An AI-assisted **Home Assistant** supervisor: it correlates unavailable entities, history, and core logs into a concise diagnostic narrative—with a path toward **Cursor-native** operation (MCP + Skills) alongside the reference **Python + Anthropic** runner.
+An AI-assisted agent for **Home Assistant**: it pulls states, history, and core logs via the **REST API**, correlates what it finds, and produces a concise narrative—with a path toward **Cursor-native** operation (MCP + Skills) alongside the reference **Python + Anthropic** runner.
+
+This is **not** Home Assistant OS (HAOS) and **not** the built-in Home Assistant **Supervisor** add-on. The GitHub repository may still use the historical slug **`haos-supervisor`**.
 
 ## Branches
 
 | Branch | Purpose |
 |--------|---------|
 | **`main`** | Project overview, architecture mental map, and **phased implementation plan** for the Cursor/MCP track. |
-| **`dev`** | Reference implementation: Python agent, HA REST client, tools, and cron-friendly `run.py`. |
+| **`dev`** | Reference implementation: Python + Anthropic agent, HA REST client, tools, and cron-friendly `run.py`. |
 
 Switch to `dev` for install, `.env`, and day-to-day code.
 
