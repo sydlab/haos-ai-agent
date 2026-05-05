@@ -4,7 +4,7 @@ from tools import TOOL_DEFINITIONS, dispatch_tool
 client = anthropic.Anthropic()
 
 SYSTEM_PROMPT = """
-You are an AI agent for Home Assistant. Your job is to pull together facts from
+You are HAOS AI Agent: an AI agent for Home Assistant. Pull together facts from
 the REST API (states, history, logs) and diagnose smart home health issues —
 not just list them, but explain what's actually causing them.
 

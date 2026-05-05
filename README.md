@@ -1,8 +1,8 @@
-# Home Assistant AI Agent
+# HAOS AI Agent
 
 **Branch:** `dev` — reference Python + Anthropic agent (this README). For the **Cursor/MCP phased plan** and repo layout, see the default **`main`** branch on GitHub.
 
-This is **not** Home Assistant OS (HAOS) and **not** the built-in Home Assistant **Supervisor** stack; it is a standalone AI agent that reads your instance via the **REST API** and summarizes what it finds.
+**HAOS AI Agent** is the project name (repository **`haos-ai-agent`**). It is **not** the official **Home Assistant OS** image and **not** the built-in **Supervisor** add-on stack; it is a standalone AI agent that reads your instance via the **REST API** and summarizes what it finds.
 
 An AI agent that monitors your Home Assistant instance using Claude. It diagnoses device
 failures, correlates root causes across multiple data sources, and sends you a plain-English
@@ -20,28 +20,28 @@ report — with concrete next steps.
 ### 0. Clone this repository
 
 ```bash
-git clone git@github.com:sydlab/home-assistant-ai-agent.git
-cd home-assistant-ai-agent
+git clone git@github.com:sydlab/haos-ai-agent.git
+cd haos-ai-agent
 git checkout dev
 ```
 
-### 2. Get a Home Assistant long-lived token
+### 1. Get a Home Assistant long-lived token
 
 HA → Profile (bottom-left avatar) → Long-Lived Access Tokens → Create Token
 
-### 3. Find your mobile app service name
+### 2. Find your mobile app service name
 
 HA → Developer Tools → Services → search `notify.mobile_app`
 Update `mobile_service` in `ha_client.py` with your device name.
 
-### 4. Configure environment
+### 3. Configure environment
 
 ```bash
 cp .env.example .env
 # Edit .env with your values
 ```
 
-### 5. Install and run
+### 4. Install and run
 
 ```bash
 pip install -r requirements.txt
@@ -56,14 +56,14 @@ python run.py
 # Run at 7am and 10pm daily
 crontab -e
 
-0  7 * * * cd /home/pi/home-assistant-ai-agent && export $(cat .env | xargs) && python run.py >> /var/log/ha-ai-agent.log 2>&1
-0 22 * * * cd /home/pi/home-assistant-ai-agent && export $(cat .env | xargs) && python run.py >> /var/log/ha-ai-agent.log 2>&1
+0  7 * * * cd /home/pi/haos-ai-agent && export $(cat .env | xargs) && python run.py >> /var/log/haos-ai-agent.log 2>&1
+0 22 * * * cd /home/pi/haos-ai-agent && export $(cat .env | xargs) && python run.py >> /var/log/haos-ai-agent.log 2>&1
 ```
 
 ## Project structure
 
 ```
-home-assistant-ai-agent/   # example clone directory — repo: https://github.com/sydlab/home-assistant-ai-agent
+haos-ai-agent/   # example clone directory — https://github.com/sydlab/haos-ai-agent
 ├── config.py       # env var loading
 ├── ha_client.py    # HA REST API calls
 ├── tools.py        # Claude tool definitions + dispatcher
