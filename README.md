@@ -55,7 +55,7 @@ crontab -e
 ## Project structure
 
 ```
-home-assistant-ai-agent/   # example clone directory; repo slug may still be haos-supervisor on GitHub
+home-assistant-ai-agent/   # example clone directory — repo: https://github.com/sydlab/home-assistant-ai-agent
 ├── config.py       # env var loading
 ├── ha_client.py    # HA REST API calls
 ├── tools.py        # Claude tool definitions + dispatcher
