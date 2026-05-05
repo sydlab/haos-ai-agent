@@ -1,10 +1,10 @@
-# Home Assistant AI Agent
+# HAOS AI Agent
 
 An AI-assisted agent for **Home Assistant**: it pulls states, history, and core logs via the **REST API**, correlates what it finds, and produces a concise narrative—with a path toward **Cursor-native** operation (MCP + Skills) alongside the reference **Python + Anthropic** runner.
 
-This is **not** Home Assistant OS (HAOS) and **not** the built-in Home Assistant **Supervisor** add-on.
+**HAOS AI Agent** is the project name; the repository is **`haos-ai-agent`**. It is **not** the official **Home Assistant OS** image and **not** the built-in **Supervisor** add-on stack.
 
-**Repository:** [github.com/sydlab/home-assistant-ai-agent](https://github.com/sydlab/home-assistant-ai-agent)
+**Repository:** [github.com/sydlab/haos-ai-agent](https://github.com/sydlab/haos-ai-agent)
 
 ## Branches
 
@@ -76,8 +76,8 @@ Choose explicitly; avoid silent mobile-notify failures.
 ## Local clone (work on `dev`)
 
 ```bash
-git clone git@github.com:sydlab/home-assistant-ai-agent.git
-cd home-assistant-ai-agent
+git clone git@github.com:sydlab/haos-ai-agent.git
+cd haos-ai-agent
 git checkout dev
 cp .env.example .env
 pip install -r requirements.txt
